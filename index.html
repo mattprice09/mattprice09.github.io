@@ -2,14 +2,19 @@
 <html>
 <head>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="tester.js"></script>
+<script>
+
+trackString = addTrack();
+document.prog.addTrack(trackString);
+
+</script>
 </head>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
-<script>
-
-addTrack();
-</script>
+<applet code="UniSound.class"
+		name="prog"
+		height=0 width=0>
+</applet>
 </body>
 </html>
