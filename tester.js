@@ -15,7 +15,7 @@ var request = {"Data":"Success!!"};
 
 function addTrack() {
     $.ajax({
-    url: 'http://mattprice09.github.io/addTrack.py',
+    url: 'mattprice09.github.io/Unisound/src/UniSound.java',
     type:  ['GET','POST'],
     cache: false,
     data: JSON.stringify(request),
