@@ -16,7 +16,7 @@ var request = {"Data":"Success!!"};
 function addTrack() {
     $.ajax({
     url: 'mattprice09.github.io/Unisound/src/UniSound.java',
-    type:  ['GET','POST'],
+    type:  ['POST'],
     cache: false,
     data: JSON.stringify(request),
     contentType: 'application/json',
