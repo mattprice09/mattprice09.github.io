@@ -16,7 +16,7 @@ var request = {"Data":"Success!!"};
 function addTrack() {
     $.ajax({
     url: 'http://mattprice09.github.io/addTrack.py',
-    type: ['GET', 'POST'],
+    type:  ['GET','POST'],
     cache: false,
     data: JSON.stringify(request),
     contentType: 'application/json',
