@@ -1,16 +1,20 @@
+
+
 function on_request_success(response) {
     console.debug('response', response);
     document.write("Success!!!");
 } 
 
 function on_request_error(r, text_status, error_thrown) {
-    console.debug('error', text_status + ", " + error_thrown + ":\n" + r.responseText);
-    document.write("Failure");
+    console.log(r);
+    console.debug('error' + text_status + ", " + error_thrown + ":\n" + r.responseText);
+    document.write("Failure line 8");
 }
 
 var request = {"Data":"Success!!"};
 
-$.ajax({
+function addTrack() {
+    $.ajax({
     url: 'http://mattprice09.github.io/addTrack.py',
     type: 'POST',
     cache: false,
@@ -20,3 +24,4 @@ $.ajax({
     success: on_request_success,
     error: on_request_error
 });
+}
