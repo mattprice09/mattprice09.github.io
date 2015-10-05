@@ -1,0 +1,31 @@
+body {
+	background-color: #FFD3A0;
+}
+
+h1 {
+	color: #000000;
+	font-family: Arial;
+}
+
+h2 {
+	font-size: 20px;
+	font-family: Arial;
+	color: #000000;
+}
+
+.mapClass {
+	height: 800px;
+	width: 75%;
+	border: 3px solid #000000;
+	float: right;
+}
+
+.legendClass {
+	height: 800px;
+	width: 23%;
+	border: 3px solid #000000;
+	background-color: #FFFFFF;
+	padding: 5px;
+	float: left;
+	overflow: auto;
+}
