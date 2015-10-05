@@ -39,6 +39,7 @@ var initData = function() {
 	$.getJSON("SDpairs.json", function(data) {
 
 		$.each(data['SDpairs'],function(doc) {
+			console.log(doc);
 		if (currPair == null) {
 			// If it is the first JSON to be read
 			currPair = [];
