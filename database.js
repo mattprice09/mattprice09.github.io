@@ -1,7 +1,5 @@
 var sdPairs = [][];
 
-
-
 var initData = function() {
 	var currPair = [];
 
