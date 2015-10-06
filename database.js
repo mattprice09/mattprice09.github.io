@@ -22,7 +22,6 @@ var initData = function() {
 	});
 	});
 
-	
     console.log(sdPairs[6][0]['Source']);
 
 	// Create and push arrays of JSONs into sdPairs. Each array contains edges from the same SD Pair
