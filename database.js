@@ -30,8 +30,8 @@ var initData = function() {
 
 		for (var name in json["SDpairs"]) {
 			var edge = json["SDpairs"][name];
-			
-			console.log(json["SDPairs"][edge]);
+
+			console.log(edge);
 			console.log("Type of 'edge': " + typeof edge);
 			if (currPair == null) {
 				// If it is the first JSON to be read
