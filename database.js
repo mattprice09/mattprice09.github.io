@@ -7,9 +7,10 @@ var initData = function() {
 		
 		console.log(data);
 		console.log("Type of 'data': " + typeof data);
+		var json = JSON.parse(data);
 
-		for (var edge in data["SDpairs"]) {
-			console.log(data["SDPairs"][edge]);
+		for (var edge in json["SDpairs"]) {
+			console.log(json["SDPairs"][edge]);
 			console.log("Type of 'edge': " + typeof edge);
 			if (currPair == null) {
 				// If it is the first JSON to be read
