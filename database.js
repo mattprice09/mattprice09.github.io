@@ -7,7 +7,7 @@ var initData = function() {
 		
 		console.log(data);
 
-		for (edge in data["SDpairs"]) {
+		for (var edge in data["SDpairs"]) {
 			console.log(edge);
 			if (currPair == null) {
 				// If it is the first JSON to be read
