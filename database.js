@@ -7,8 +7,8 @@ var initData = function() {
 		
 		var str = JSON.stringify(data);
 		var json = JSON.parse(str);
-		console.log(json);
-		console.log("Type of 'json': " + typeof json);
+		// console.log(json);
+		// console.log("Type of 'json': " + typeof json);
 
 		// for (var i = 0; i < json["SDpairs"].length; i++) {
 		// 	console.log(json["SDPairs"][i]);
