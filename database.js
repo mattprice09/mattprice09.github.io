@@ -31,8 +31,8 @@ var initData = function() {
 		for (var name in json["SDpairs"]) {
 			var edge = json["SDpairs"][name];
 
-			console.log(edge);
-			console.log("Type of 'edge': " + typeof edge);
+			// console.log(edge);
+			// console.log("Type of 'edge': " + typeof edge);
 			if (currPair.length == 0) {
 				// If it is the first JSON to be read
 				currPair.push(edge);
@@ -46,26 +46,9 @@ var initData = function() {
 				currPair.push(edge);
 			}
 		}
-
-		// $.each($.parseJSON(data["SDPairs"]), function(doc) {
-		// 	console.log(doc);
-		// 	if (currPair == null) {
-		// 		// If it is the first JSON to be read
-		// 		currPair = [];
-		// 		currPair.push(doc);
-		// 	} else if (doc['SD Pair'] == currPair[0]['SD Pair']) {
-		// 		// If the JSON is part of the same SD pair as currPair, push into currPair
-		// 		currPair.push(doc);
-		// 	} else {
-		// 		// If it is a new SDpair as compared to currPair
-		// 		sdPairs.push(currPair);
-		// 		currPair = [];
-		// 		currPair.push(doc);
-		// 	}
-		// });
 	});
 
-	console.log(sdPairs[6][0]['Source']);
+	console.log(sdPairs.length);
 
 	// Create and push arrays of JSONs into sdPairs. Each array contains edges from the same SD Pair
 	
