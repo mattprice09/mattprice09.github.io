@@ -5,9 +5,9 @@ var initData = function() {
 
 	$.getJSON("SDpairs.json", function(data) {
 		
-		console.log(data);
-		console.log("Type of 'data': " + typeof data);
 		var json = JSON.parse(data);
+		console.log(json);
+		console.log("Type of 'json': " + typeof json);
 
 		for (var edge in json["SDpairs"]) {
 			console.log(json["SDPairs"][edge]);
