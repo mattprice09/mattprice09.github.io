@@ -6,7 +6,7 @@ var initData = function() {
 	$.getJSON("SDpairs.json", function(data) {
 		
 		console.log(data);
-		$.each($.parseJSON(data), function(doc) {
+		$.each($.parseJSON(data["SDPairs"]), function(doc) {
 			console.log(doc);
 			if (currPair == null) {
 				// If it is the first JSON to be read
