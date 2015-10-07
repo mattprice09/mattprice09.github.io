@@ -5,7 +5,7 @@ var initData = function() {
 
 	$.getJSON("SDpairs.json", function(data) {
 		
-		var json = JSON.parse(data);
+		var json = JSON.stringify(data);
 		console.log(json);
 		console.log("Type of 'json': " + typeof json);
 
