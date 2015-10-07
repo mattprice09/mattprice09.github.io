@@ -1,9 +1,13 @@
 var loadLegend = function() {
 	var pair;
-	var num = 0;
 	for (sdPair in sdPairs) {
 		pair = document.createElement("div");
-		pair.setAttribute("id", sdPairs[num]["SD Pair"]);
-		
+		pair.setAttribute("id", sdPair[0]["SD Pair"]);
+		pair.className("legendPairClass");
+		pair.onClick = function() {
+			// Add Map updates here
+		}; 
+		document.getElementById(sdPair[0]["SD Pair"]).innerHTML = sdPair[0]["SD Pair"];
+		document.getElementByID("legend").appendChild(pair);
 	}
 }

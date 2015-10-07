@@ -6,9 +6,11 @@ var initData = function() {
 	$.getJSON("SDpairs.json", function(data) {
 		
 		console.log(data);
+		console.log("Type of 'data': " + typeof data);
 
 		for (var edge in data["SDpairs"]) {
 			console.log(data["SDPairs"][edge]);
+			console.log("Type of 'edge': " + typeof edge);
 			if (currPair == null) {
 				// If it is the first JSON to be read
 				currPair = [];
