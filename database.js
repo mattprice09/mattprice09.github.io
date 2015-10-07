@@ -33,9 +33,8 @@ var initData = function() {
 
 			console.log(edge);
 			console.log("Type of 'edge': " + typeof edge);
-			if (currPair == null) {
+			if (currPair.length == 0) {
 				// If it is the first JSON to be read
-				currPair = [];
 				currPair.push(edge);
 			} else if (edge['SD Pair'] == currPair[0]['SD Pair']) {
 				// If the JSON is part of the same SD pair as currPair, push into currPair
