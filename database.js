@@ -9,7 +9,7 @@ var initData = function() {
 		
 		//var str = JSON.stringify(data);
 		//var json = JSON.parse(str);
-
+		var num = 0;
 		for (var name in data["SDpairs"]) {
 			var edge = data["SDpairs"][name];
 
@@ -25,6 +25,8 @@ var initData = function() {
 				currPair = [];
 				currPair.push(edge);
 			}
+			console.log(num);
+			num++;
 		}
 		sdPairs.push(currPair);
 	});
