@@ -25,7 +25,7 @@ var initData = function() {
 				currPair = [];
 				currPair.push(edge);
 			}
-			console.log(num);
+			
 			if (num == 0) {
 				console.log("Edge is " + edge);
 				console.log("edge['SD Pair'] is " + edge['SD Pair']);
