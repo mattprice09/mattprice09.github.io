@@ -49,7 +49,8 @@ var initData = function() {
 	});
 
 	console.log(sdPairs.length);
-
+	console.log(currPair.length);
+	
 	// Create and push arrays of JSONs into sdPairs. Each array contains edges from the same SD Pair
 	
 }
