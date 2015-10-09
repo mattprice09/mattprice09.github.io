@@ -10,8 +10,8 @@ var initData = function() {
 		//var str = JSON.stringify(data);
 		//var json = JSON.parse(str);
 		var num = 0;
-		for (var name in data["SDpairs"]) {
-			var edge = data["SDpairs"][name];
+		for (var element in data["SDpairs"]) {
+			var edge = data["SDpairs"][element];
 
 			if (currPair.length == 0) {
 				// If it is the first JSON to be read
@@ -26,6 +26,10 @@ var initData = function() {
 				currPair.push(edge);
 			}
 			console.log(num);
+			if (num == 0) {
+				console.log("Edge is " + edge);
+				console.log("edge['SD Pair'] is " + edge['SD Pair']);
+			}
 			num++;
 		}
 		sdPairs.push(currPair);
