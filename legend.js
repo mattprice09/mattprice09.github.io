@@ -1,6 +1,6 @@
 var activePairs = [];
 
-var loadLegend = function {
+var loadLegend = function() {
 	var pair;
 	var name = "";
 	var num = 0;
