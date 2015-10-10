@@ -1,11 +1,11 @@
 var activePairs = [];
 
-function loadLegend() {
+var loadLegend = function() {
 	var pair;
 	var num = 0;
 	for (sdPair in sdPairs) {
 		pair = document.createElement("div");
-		pair.setAttribute("id", sdPair[0]["SD Pair"]);
+		pair.id = sdPair[0]["SD Pair"];
 
 		document.getElementById("legend").appendChild(pair);
 		document.getElementById(sdPair[0]["SD Pair"]).innerHTML = sdPair[0]["SD Pair"];
