@@ -14,7 +14,8 @@ var network = function(arr) {
 	var dst;
 	var flw;
 	var cap;
-
+	console.log(edges[0][0]);
+	
 	// Assign flow and capacity to edges
 	for (var i = 0; i < arr.length; i++) {
 		src = namesMap[arr[i]['Source']];
