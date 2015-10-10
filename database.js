@@ -19,10 +19,6 @@ function initData() {
 function initialize(data) {
 	var currPair = [];
 
-	for (var cname : namesArr) {
-		console.log(cname);
-	}
-
 	var num = 0;
 	for (var element in data["SDpairs"]) {
 		var edge = data["SDpairs"][element];
