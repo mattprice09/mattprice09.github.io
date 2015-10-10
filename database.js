@@ -19,8 +19,8 @@ function initialize(data) {
 		assignCountryNames(names);
 	});
 
-	for (var name : namesArr) {
-		console.log(name);
+	for (var cname : namesArr) {
+		console.log(cname);
 	}
 
 	var num = 0;
