@@ -5,7 +5,7 @@ var isActive;
 
 // Network constructor
 var network = function(arr) {
-	createNetwork();
+	this.createNetwork();
 	var src;
 	var dst;
 	var flw;
