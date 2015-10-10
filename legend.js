@@ -1,6 +1,6 @@
 var activePairs = [];
 
-var loadLegend = function() {
+function loadLegend() {
 	var pair;
 	var num = 0;
 	for (sdPair in sdPairs) {
@@ -16,7 +16,7 @@ var loadLegend = function() {
 		document.getElementById("legend").appendChild(pair);
 		document.getElementById(sdPair[0]["SD Pair"]).innerHTML = sdPair[0]["SD Pair"];
 		document.getElementById(sdPair[0]["SD Pair"]).className = "legendPairClass";
-		document.getElementByID(sdPair[0]["SD Pair"]).onClick = processSDClick();
+		document.getElementById(sdPair[0]["SD Pair"]).onClick = "processSDClick()";
 
 		activePairs.push(false);
 		num++;
