@@ -1,11 +1,15 @@
-var sdPairs = [];
+var networks = [];
+var namesArr = [];
+//var sdPairs = [];
 
 // Create and push arrays of JSONs into sdPairs. 
 // Each array contains edges from the same SD Pair
 function initData() {
-
 	$.getJSON("SDpairs.json", function(data) {		
 		initialize(data);
+	});
+	$.getJSON("CountryNames.json", function(names) {
+		assignCountryNames(names);
 	});
 }
 
@@ -26,13 +30,29 @@ function initialize(data) {
 			currPair.push(edge);
 		} else {
 			// If it is a new SDpair as compared to currPair
-			sdPairs.push(currPair);
+			//sdPairs.push(currPair);
+			createNetwork(currPair);
 			currPair = [];
 			currPair.push(edge);
 			num++;
 		}
 	}
-	sdPairs.push(currPair);
+	createNetwork(currPair);
+	//sdPairs.push(currPair);
 
-	loadLegend();
+	//loadLegend();
+}
+
+// Instantiate and populate the networks array with data
+function createNetwork(arr) {
+	var net = new network(arr);
+	networks.push(net);
+}
+
+// Assign country names to global names array
+function assignCountryNames(json) {
+	for (var element in json["Names"]) {
+		var name = json["Names"][element];
+		namesArr.push(name['Name']);
+	}
 }

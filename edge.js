@@ -3,35 +3,42 @@ var dest = "";
 var flow = "";
 var capacity = "";
 
+var edge = function(src, dst, flw, cap) {
+	this.source = src;
+	this.dest = dst;
+	this.flow - flow;
+	this.capacity = cap;
+}
+
 // ~~~~~Getters and setters below here~~~~~
-function getSource() {
+edge.prototype.getSource = function() {
 	return this.source;
 }
 
-function setSource(country) {
+edge.prototype.setSource = function(country) {
 	this.source = country;
 }
 
-function getDest() {
+edge.prototype.getDest = function() {
 	return this.dest;
 }
 
-function setDest(country) {
+edge.prototype.setDest = function(country) {
 	this.dest = country;
 }
 
-function getFlow() {
+edge.prototype.getFlow = function() {
 	return this.flow;
 }
 
-function setFlow(num) {
+edge.prototype.setFlow = function(num) {
 	this.flow = num;
 }
 
-function getCapacity() {
+edge.prototype.getCapacity = function() {
 	return this.capacity;
 }
 
-function setCapacity(num) {
+edge.prototype.setCapacity = function(num) {
 	this.capacity = num;
 }

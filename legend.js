@@ -1,5 +1,7 @@
 var activePairs = [];
 
+// I NEED TO UPDATE THIS WITH THE REMOVAL OF sdPairs ARRAY
+
 // Imports data into the legend
 var loadLegend = function() {
 	var pairDiv;
