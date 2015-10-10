@@ -5,7 +5,6 @@ var sdPairs = [];
 function initData() {
 
 	$.getJSON("SDpairs.json", function(data) {		
-		console.log("We're inside of $.getJSON");
 		initialize(data);
 	});
 }
@@ -13,8 +12,6 @@ function initData() {
 // Callback function for initData()
 function initialize(data) {
 	var currPair = [];
-
-	console.log("We're inside of initalize(data)");
 
 	var num = 0;
 	for (var element in data["SDpairs"]) {
@@ -36,10 +33,6 @@ function initialize(data) {
 		}
 	}
 	sdPairs.push(currPair);
-
-	loadLegend();
-
-	console.log("Expected no. of SD pairs: " + num);
-	console.log(sdPairs.length);
-	console.log(currPair.length);
+	console.log(sdPairs);
+	//loadLegend();
 }

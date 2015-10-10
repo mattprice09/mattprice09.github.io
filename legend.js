@@ -4,15 +4,14 @@ var activePairs = [];
 var loadLegend = function() {
 	var pair;
 	var name = "";
-	var num = 0;
 
 	// Iterate through all SD pairs and create divs in legend
-	for (var sdPair in sdPairs) {
+	for (var i = 0; i < sdPairs.length; i++) {
 		pair = document.createElement("div");
 		name = sdPair[0]['SD Pair'];
 		pair.setAttribute("id", name);
 
-		console.log(sdPair);
+		//console.log(sdPair);
 		//console.log(sdPairs);
 
 		document.getElementById("legend").appendChild(pair);
@@ -21,9 +20,7 @@ var loadLegend = function() {
 		document.getElementById(name).onClick = "processSDClick()";
 
 		activePairs.push(false);
-		num++;
 	}
-	console.log("Number of times loadLegend for loop ran: " + num);
 }
 
 // The function to be called when a legend element is clicked

@@ -1,2 +1,0 @@
-var edges = [];
-var nodes = [];
