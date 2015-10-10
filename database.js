@@ -33,20 +33,20 @@ function initialize(data) {
 		} else {
 			// If it is a new SDpair as compared to currPair
 			//sdPairs.push(currPair);
-			createNetwork(currPair);
+			makeNetwork(currPair);
 			currPair = [];
 			currPair.push(edge);
 			num++;
 		}
 	}
-	createNetwork(currPair);
+	makeNetwork(currPair);
 	//sdPairs.push(currPair);
 
 	//loadLegend();
 }
 
 // Instantiate and populate the networks array with data
-function createNetwork(arr) {
+function makeNetwork(arr) {
 	var net = new network(arr);
 	networks.push(net);
 }
