@@ -7,7 +7,6 @@ function initData() {
 	// Each array contains edges from the same SD Pair
 	$.getJSON("SDpairs.json", function(data) {
 		
-		var num = 0;
 		for (var element in data["SDpairs"]) {
 			var edge = data["SDpairs"][element];
 
@@ -23,15 +22,9 @@ function initData() {
 				db.currPair = [];
 				db.currPair.push(edge);
 			}
-
-			if (num == 0) {
-				console.log("Edge is " + edge);
-				console.log("edge['SD Pair'] is " + edge['SD Pair']);
-			}
-			num++;
 		}
 		db.sdPairs.push(db.currPair);
 	});
-	console.log(sdPairs.length);
-	console.log(currPair.length);
+	console.log(db.sdPairs.length);
+	console.log(db.currPair.length);
 }
