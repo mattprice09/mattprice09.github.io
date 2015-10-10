@@ -42,3 +42,19 @@ network.prototype.createNetwork = function() {
 network.prototype.getN = function() {
 	return this.n;
 }
+
+network.prototype.getEdges = function() {
+	return this.edges;
+}
+
+network.prototype.getNodes = function() {
+	return this.nodes;
+}
+
+network.prototype.networkShowing = function() {
+	return this.isActive;
+}
+
+network.prototype.setActivityState = function(boo) {
+	this.isActive = boo;
+}
