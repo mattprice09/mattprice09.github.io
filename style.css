@@ -14,14 +14,14 @@ h2 {
 }
 
 .mapClass {
-	height: 800px;
+	height: 80%;
 	width: 75%;
 	border: 3px solid #000000;
 	float: right;
 }
 
 .legendClass {
-	height: 800px;
+	height: 80%;
 	width: 23%;
 	border: 3px solid #000000;
 	background-color: #FFFFFF;
@@ -35,5 +35,5 @@ h2 {
 	width: 100%;
 	border: 2px solid #000000;
 	background-color: #FFECCB;
-	content text-align: center;
+
 }

@@ -10,13 +10,9 @@ var loadLegend = function() {
 	for (var i = 0; i < sdPairs.length; i++) {
 		pairArr = sdPairs[i];
 		name = pairArr[0]['SD Pair'];
-		
+
 		pairDiv = document.createElement("div");
 		pairDiv.setAttribute("id", name);
-
-		console.log(pairArr);
-		console.log(name);
-		//console.log(sdPairs);
 
 		document.getElementById("legend").appendChild(pairDiv);
 		document.getElementById(name).innerHTML = name;
