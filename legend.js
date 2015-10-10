@@ -6,13 +6,13 @@ var loadLegend = function {
 	var num = 0;
 	for (sdPair in sdPairs) {
 		pair = document.createElement("div");
-		name = sdPair[0]["SD Pair"];
+		name = sdPair[0]['SD Pair'];
 		pair.setAttribute("id", name);
 
 		console.log("Name string = " + name);
-		
+
 		document.getElementById("legend").appendChild(pair);
-		document.getElementById(name).innerHTML = sdPair[0]["SD Pair"];
+		document.getElementById(name).innerHTML = name;
 		document.getElementById(name).className = "legendPairClass";
 		document.getElementById(name).onClick = "processSDClick()";
 
