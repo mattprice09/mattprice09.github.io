@@ -6,6 +6,10 @@ var namesMap = {};
 // Create and push arrays of JSONs into sdPairs. 
 // Each array contains edges from the same SD Pair
 function initData() {
+	$.getJSON("CountryNames.json", function(names) {
+		assignCountryNames(names);
+	});
+
 	$.getJSON("SDpairs.json", function(data) {		
 		initialize(data);
 	});
@@ -15,9 +19,7 @@ function initData() {
 function initialize(data) {
 	var currPair = [];
 
-	$.getJSON("CountryNames.json", function(names) {
-		assignCountryNames(names);
-	});
+	
 
 	var num = 0;
 	for (var element in data["SDpairs"]) {
