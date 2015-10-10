@@ -1,8 +1,8 @@
 var sdPairs = [];
+var currPair = [];
+var db = this;
 
 function initData() {
-	var currPair = [];
-	var db = this;
 	// Create and push arrays of JSONs into sdPairs. 
 	// Each array contains edges from the same SD Pair
 	$.getJSON("SDpairs.json", function(data) {
