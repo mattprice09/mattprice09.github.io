@@ -7,9 +7,8 @@ var loadLegend = function() {
 	var name = "";
 
 	// Iterate through all SD pairs and create divs in legend
-	for (var i = 0; i < sdPairs.length; i++) {
-		pairArr = sdPairs[i];
-		name = pairArr[0]['SD Pair'];
+	for (var i = 0; i < networks.length; i++) {
+		name = networks[i].getPairId();
 
 		pairDiv = document.createElement("div");
 		pairDiv.setAttribute("id", name);

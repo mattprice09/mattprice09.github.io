@@ -37,7 +37,7 @@ function initialize(data) {
 		}
 	}
 	makeNetwork(currPair);
-	//loadLegend();
+	loadLegend();
 }
 
 // Instantiate and populate the networks array with data

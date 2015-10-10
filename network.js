@@ -2,6 +2,7 @@ var edges;
 var nodes;
 var n;
 var isActive;
+var pairID;
 
 // Network constructor
 var network = function(arr) {
@@ -9,6 +10,7 @@ var network = function(arr) {
 	this.nodes = [];
 	this.edges = [];
 	this.isActive = false;
+	this.pairID = arr[0]['SD Pair'];
 	this.createNetwork();
 	var src;
 	var dst;
@@ -21,10 +23,6 @@ var network = function(arr) {
 		dst = namesMap[arr[i]['Dest']];
 		flw = parseFloat(arr[i]['Flow']);
 		cap = parseFloat(arr[i]['Capacity']);
-		console.log(src);
-		console.log(dst);
-		console.log(flw);
-		console.log(cap);
 		this.edges[src][dst].addFlow(flw);
 		this.edges[src][dst].setCapacity(cap);
 	}
@@ -60,4 +58,8 @@ network.prototype.networkShowing = function() {
 
 network.prototype.setActivityState = function(boo) {
 	this.isActive = boo;
+}
+
+network.prototype.getPairId = function() {
+	return this.pairID;
 }
