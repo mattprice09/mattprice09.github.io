@@ -6,7 +6,7 @@ function initData() {
 	// Each array contains edges from the same SD Pair
 	$.getJSON("SDpairs.json", function(data) {
 		
-		initalize(data);
+		initialize(data);
 
 		// for (var element in data["SDpairs"]) {
 		// 	var edge = data["SDpairs"][element];
