@@ -1,7 +1,12 @@
-var source = "";
-var dest = "";
+var source;
+var dest;
 var flow = "";
 var capacity = "";
+
+var edge = function(src, dest) {
+	this.source = src;
+	this.dest = dest;
+}
 
 var edge = function(src, dst, flw, cap) {
 	this.source = src;

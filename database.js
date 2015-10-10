@@ -1,5 +1,6 @@
 var networks = [];
 var namesArr = [];
+var namesMap = {};
 //var sdPairs = [];
 
 // Create and push arrays of JSONs into sdPairs. 
@@ -54,10 +55,13 @@ function createNetwork(arr) {
 	networks.push(net);
 }
 
-// Assign country names to global names array
+// Assign country names to global names array and map
 function assignCountryNames(json) {
+	var num = 0;
 	for (var element in json["Names"]) {
 		var name = json["Names"][element];
 		namesArr.push(name['Name']);
+		namesMap[name['Name']] = 0;
+		num++;
 	}
 }
