@@ -9,6 +9,8 @@ var loadLegend = function() {
 		name = sdPair[0]['SD Pair'];
 		pair.setAttribute("id", name);
 
+		console.log("sdPair value: " + sdPair);
+		console.log("sdPairs length: " + sdPairs.length);
 		console.log("Name string = " + name);
 
 		document.getElementById("legend").appendChild(pair);
