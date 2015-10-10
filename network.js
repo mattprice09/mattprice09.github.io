@@ -17,10 +17,10 @@ var network = function(arr) {
 		dst = namesMap[arr[i]['Dest']];
 		flw = parseFloat(arr[i]['Flow']);
 		cap = parseFloat(arr[i]['Capacity']);
-		console.log(src);
-		console.log(dst);
-		console.log(flw);
-		console.log(cap);
+		// console.log(src);
+		// console.log(dst);
+		// console.log(flw);
+		// console.log(cap);
 		edges[src][dst].addFlow(flw);
 		edges[src][dst].setCapacity(cap);
 	}
@@ -35,6 +35,7 @@ network.prototype.createNetwork = function() {
 		this.edges[i]= new Array(this.n);
 		for (var j = 0; j < this.n; j++) {
 			this.edges[i][j] = new edge(i, j);
+			console.log(this.edges[i][j]);
 		}
 	}
 }

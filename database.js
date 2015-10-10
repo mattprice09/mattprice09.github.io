@@ -1,7 +1,6 @@
 var networks = [];
 var namesArr = [];
 var namesMap = {};
-//var sdPairs = [];
 
 // Create and push arrays of JSONs into sdPairs. 
 // Each array contains edges from the same SD Pair
@@ -9,7 +8,6 @@ function initData() {
 	$.getJSON("CountryNames.json", function(names) {
 		assignCountryNames(names);
 	});
-
 	$.getJSON("SDpairs.json", function(data) {		
 		initialize(data);
 	});
@@ -18,8 +16,6 @@ function initData() {
 // Callback function for initData()
 function initialize(data) {
 	var currPair = [];
-
-	
 
 	var num = 0;
 	for (var element in data["SDpairs"]) {
