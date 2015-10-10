@@ -33,6 +33,6 @@ function initialize(data) {
 		}
 	}
 	sdPairs.push(currPair);
-	console.log(sdPairs);
-	//loadLegend();
+
+	loadLegend();
 }

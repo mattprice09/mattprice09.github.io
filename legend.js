@@ -2,22 +2,23 @@ var activePairs = [];
 
 // Imports data into the legend
 var loadLegend = function() {
-	var pair;
-	var element;
+	var pairDiv;
+	var pairArr;
 	var name = "";
 
 	// Iterate through all SD pairs and create divs in legend
 	for (var i = 0; i < sdPairs.length; i++) {
-		element = sdPairs[i];
-		pair = document.createElement("div");
-		name = element[0]['SD Pair'];
-		pair.setAttribute("id", name);
+		pairArr = sdPairs[i];
+		name = pairArr[0]['SD Pair'];
+		
+		pairDiv = document.createElement("div");
+		pairDiv.setAttribute("id", name);
 
-		console.log(element);
+		console.log(pairArr);
 		console.log(name);
 		//console.log(sdPairs);
 
-		document.getElementById("legend").appendChild(pair);
+		document.getElementById("legend").appendChild(pairDiv);
 		document.getElementById(name).innerHTML = name;
 		document.getElementById(name).className = "legendPairClass";
 		document.getElementById(name).onClick = "processSDClick()";
