@@ -10,15 +10,18 @@ var network = function(arr) {
 	var dst;
 	var flw;
 	var cap;
+	// Assign flow and capacity to edges
 	for (var i = 0; i < arr.length; i++) {
 		src = namesMap[arr[i]['Source']];
 		dst = namesMap[arr[i]['Dest']];
-		flow = parseFloat(arr[i]['Flow']);
+		flw = parseFloat(arr[i]['Flow']);
 		cap = parseFloat(arr[i]['Capacity']);
 		console.log(src);
 		console.log(dst);
 		console.log(flw);
 		console.log(cap);
+		edges[src][dst].addFlow(flw);
+		edges[src][dst].setCapacity(cap);
 	}
 
 	this.isActive = false;

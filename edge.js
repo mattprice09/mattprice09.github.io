@@ -1,11 +1,13 @@
 var source;
 var dest;
-var flow = "";
-var capacity = "";
+var flow;
+var capacity;
 
 var edge = function(src, dest) {
 	this.source = src;
 	this.dest = dest;
+	this.flow = 0.0;
+	this.capacity = 0.0;
 }
 
 var edge = function(src, dst, flw, cap) {
@@ -13,6 +15,10 @@ var edge = function(src, dst, flw, cap) {
 	this.dest = dst;
 	this.flow - flow;
 	this.capacity = cap;
+}
+
+edge.prototype.addFlow = function(num) {
+	this.flow += num;
 }
 
 // ~~~~~Getters and setters below here~~~~~
