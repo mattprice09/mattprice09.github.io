@@ -1,6 +1,6 @@
 var edges = [];
 var nodes = [];
-var n = 196;
+var n;
 var isActive;
 
 // Network constructor
@@ -30,6 +30,8 @@ var network = function(arr) {
 
 // Instantiate the nodes and edges
 network.prototype.createNetwork = function() {
+	this.n = 196;
+	console.log("createNetwork was called...");
 	for (var i = 0; i < this.n; i++) {
 		this.nodes.push(new node(namesArr[i]));
 		this.edges[i]= new Array(this.n);
