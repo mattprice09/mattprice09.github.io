@@ -1,0 +1,2 @@
+var edges = [];
+var nodes = [];

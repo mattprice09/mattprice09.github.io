@@ -13,7 +13,7 @@ var loadLegend = function() {
 		pair.setAttribute("id", name);
 
 		console.log(sdPair);
-		console.log(sdPairs;)
+		console.log(sdPairs);
 
 		document.getElementById("legend").appendChild(pair);
 		document.getElementById(name).innerHTML = name;
