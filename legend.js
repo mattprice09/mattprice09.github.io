@@ -25,7 +25,7 @@ var loadLegend = function() {
 
 // The function to be called when a legend element is clicked
 function processSDClick(name) {
-	$(document.getElementById(name)).effect("highlight", { color: "#ff0000" }, 3000);
+	console.log(name);
 
 	// if (activePairs[num] == false) {
 	// 	// If the SD pair data is not currently active on the map
