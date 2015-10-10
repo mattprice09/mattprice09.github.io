@@ -1,17 +1,19 @@
 var activePairs = [];
 
+// Imports data into the legend
 var loadLegend = function() {
 	var pair;
 	var name = "";
 	var num = 0;
+
+	// Iterate through all SD pairs and create divs in legend
 	for (sdPair in sdPairs) {
 		pair = document.createElement("div");
 		name = sdPair[0]['SD Pair'];
 		pair.setAttribute("id", name);
 
-		console.log("sdPair value: " + sdPair);
-		console.log("sdPairs length: " + sdPairs.length);
-		console.log("Name string = " + name);
+		console.log(sdPair);
+		console.log(sdPairs;)
 
 		document.getElementById("legend").appendChild(pair);
 		document.getElementById(name).innerHTML = name;
@@ -24,6 +26,7 @@ var loadLegend = function() {
 	console.log("Number of times loadLegend for loop ran: " + num);
 }
 
+// The function to be called when a legend element is clicked
 function processSDClick(sdPair) {
 	if (activePairs[num] == false) {
 		// If the SD pair data is not currently active on the map
