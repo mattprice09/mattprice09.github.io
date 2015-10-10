@@ -6,8 +6,8 @@ var isActive;
 // Network constructor
 var network = function(arr) {
 	this.createNetwork();
-	var src = "";
-	var dst = "";
+	var src;
+	var dst;
 	var flw;
 	var cap;
 	// Assign flow and capacity to edges
