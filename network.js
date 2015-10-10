@@ -1,6 +1,7 @@
 var edges = [];
 var nodes = [];
 var n = 196;
+var isActive;
 
 // Network constructor
 var network = function(arr) {
@@ -9,7 +10,7 @@ var network = function(arr) {
 	var dst;
 	var flw;
 	var cap;
-	for (int i = 0; i < arr.length; i++) {
+	for (var i = 0; i < arr.length; i++) {
 		src = namesMap[arr[i]['Source']];
 		dst = namesMap[arr[i]['Dest']];
 		flow = parseFloat(arr[i]['Flow']);
@@ -19,14 +20,16 @@ var network = function(arr) {
 		console.log(flw);
 		console.log(cap);
 	}
+
+	this.isActive = false;
 }
 
 // Instantiate the nodes and edges
 network.prototype.createNetwork = function() {
-	for (int i = 0; i < this.n; i++) {
+	for (var i = 0; i < this.n; i++) {
 		this.nodes.push(new node(namesArr[i]));
 		this.edges[i]= new Array(this.n);
-		for (int j = 0; j < this.n; j++) {
+		for (var j = 0; j < this.n; j++) {
 			this.edges[i][j] = new edge(i, j);
 		}
 	}

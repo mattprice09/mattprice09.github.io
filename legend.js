@@ -1,5 +1,3 @@
-var activePairs = [];
-
 // I NEED TO UPDATE THIS WITH THE REMOVAL OF sdPairs ARRAY
 
 // Imports data into the legend
@@ -21,17 +19,10 @@ var loadLegend = function() {
 		document.getElementById(name).className = "legendPairClass";
 		document.getElementById(name).onClick = "processSDClick(name)";
 
-		activePairs.push(false);
 	}
 }
 
 // The function to be called when a legend element is clicked
 function processSDClick(name) {
 	console.log(name);
-
-	// if (activePairs[num] == false) {
-	// 	// If the SD pair data is not currently active on the map
-	// } else {
-	// 	// If the SD pair data is active on the map
-	// }
 }
