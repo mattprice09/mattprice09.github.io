@@ -8,14 +8,15 @@ function initData() {
 	$.getJSON("SDpairs.json", function(data) {		
 		initialize(data);
 	});
-	$.getJSON("CountryNames.json", function(names) {
-		assignCountryNames(names);
-	});
 }
 
 // Callback function for initData()
 function initialize(data) {
 	var currPair = [];
+
+	$.getJSON("CountryNames.json", function(names) {
+		assignCountryNames(names);
+	});
 
 	var num = 0;
 	for (var element in data["SDpairs"]) {
