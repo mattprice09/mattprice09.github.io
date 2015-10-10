@@ -6,7 +6,6 @@ var loadLegend = function() {
 	for (sdPair in sdPairs) {
 		pair = document.createElement("div");
 		pair.setAttribute("id", sdPair[0]["SD Pair"]);
-		pair.className("legendPairClass");
 		pair.onClick = function() {
 			if (activePairs[num] == false) {
 				// If the SD pair data is not currently active on the map
@@ -14,8 +13,9 @@ var loadLegend = function() {
 				// If the SD pair data is active on the map
 			}
 		}; 
-		document.getElementByID("legend").appendChild(pair);
+		document.getElementById("legend").appendChild(pair);
 		document.getElementById(sdPair[0]["SD Pair"]).innerHTML = sdPair[0]["SD Pair"];
+		document.getElementById(sdPair[0]["SD Pair"]).className = "legendPairClass";
 
 		activePairs.push(false);
 		num++;

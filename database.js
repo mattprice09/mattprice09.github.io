@@ -32,10 +32,10 @@ function initialize(data) {
 			num++;
 		}
 	}
+	sdPairs.push(currPair);
 
 	loadLegend();
-	
-	sdPairs.push(currPair);
+
 	console.log("Expected no. of SD pairs: " + num);
 	console.log(sdPairs.length);
 	console.log(currPair.length);
