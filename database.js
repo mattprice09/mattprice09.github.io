@@ -58,6 +58,7 @@ function assignCountryNames(json) {
 		var name = json["Names"][element];
 		namesArr.push(name['Name']);
 		namesMap[name['Name']] = num;
+		console.log(typeof namesMap[name['Name']]);
 		num++;
 	}
 }
