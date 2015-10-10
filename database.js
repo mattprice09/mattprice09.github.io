@@ -18,6 +18,10 @@ function initialize(data) {
 		assignCountryNames(names);
 	});
 
+	for (var name : namesArr) {
+		console.log(name);
+	}
+
 	var num = 0;
 	for (var element in data["SDpairs"]) {
 		var edge = data["SDpairs"][element];
