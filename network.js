@@ -9,13 +9,21 @@ var network = function(arr) {
 	this.nodes = [];
 	this.edges = [];
 	this.isActive = false;
-	this.createNetwork();
+
+	for (var i = 0; i < this.n; i++) {
+		this.nodes.push(new node(namesArr[i]));
+		this.edges[i]= new Array(this.n);
+		for (var j = 0; j < this.n; j++) {
+			this.edges[i][j] = new edge(i, j);
+		}
+	}
+
 	var src;
 	var dst;
 	var flw;
 	var cap;
-	console.log(edges[0][0]);
-	
+	//console.log(edges[0][0]);
+
 	// Assign flow and capacity to edges
 	for (var i = 0; i < arr.length; i++) {
 		src = namesMap[arr[i]['Source']];
@@ -33,13 +41,7 @@ var network = function(arr) {
 
 // Instantiate the nodes and edges
 network.prototype.createNetwork = function() {
-	for (var i = 0; i < this.n; i++) {
-		this.nodes.push(new node(namesArr[i]));
-		this.edges[i]= new Array(this.n);
-		for (var j = 0; j < this.n; j++) {
-			this.edges[i][j] = new edge(i, j);
-		}
-	}
+	
 }
 
 // ~~~~~Getters and setters below here~~~~~
