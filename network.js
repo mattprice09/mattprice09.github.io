@@ -1,10 +1,14 @@
-var edges = [];
-var nodes = [];
+var edges;
+var nodes;
 var n;
 var isActive;
 
 // Network constructor
 var network = function(arr) {
+	this.n = 196;
+	this.nodes = [];
+	this.edges = [];
+	this.isActive = false;
 	this.createNetwork();
 	var src;
 	var dst;
@@ -24,13 +28,10 @@ var network = function(arr) {
 		edges[src][dst].addFlow(flw);
 		edges[src][dst].setCapacity(cap);
 	}
-
-	this.isActive = false;
 }
 
 // Instantiate the nodes and edges
 network.prototype.createNetwork = function() {
-	this.n = 196;
 	console.log("createNetwork was called...");
 	for (var i = 0; i < this.n; i++) {
 		this.nodes.push(new node(namesArr[i]));
