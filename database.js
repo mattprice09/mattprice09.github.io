@@ -33,12 +33,14 @@ function initData() {
 function initialize(data) {
 	var currPair = [];
 
+	var num = 0;
 	for (var element in data["SDpairs"]) {
 		var edge = data["SDpairs"][element];
 
 		if (currPair.length == 0) {
 			// If it is the first JSON to be read
 			currPair.push(edge);
+			num++;
 		} else if (edge['SD Pair'] == currPair[0]['SD Pair']) {
 			// If the JSON is part of the same SD pair as currPair, push into currPair
 			currPair.push(edge);
@@ -47,9 +49,11 @@ function initialize(data) {
 			sdPairs.push(currPair);
 			currPair = [];
 			currPair.push(edge);
+			num++;
 		}
 	}
 	sdPairs.push(currPair);
+	console.log("Expected no. of SD pairs: " + num);
 	console.log(sdPairs.length);
 	console.log(currPair.length);
 }
