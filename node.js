@@ -1,4 +1,4 @@
-var name = "";
+var name;
 var inDegree = "";
 var outDegree = "";
 

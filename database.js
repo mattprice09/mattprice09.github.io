@@ -30,7 +30,6 @@ function initialize(data) {
 			currPair.push(edge);
 		} else {
 			// If it is a new SDpair as compared to currPair
-			//sdPairs.push(currPair);
 			makeNetwork(currPair);
 			currPair = [];
 			currPair.push(edge);
@@ -38,8 +37,6 @@ function initialize(data) {
 		}
 	}
 	makeNetwork(currPair);
-	//sdPairs.push(currPair);
-
 	//loadLegend();
 }
 

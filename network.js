@@ -21,10 +21,10 @@ var network = function(arr) {
 		dst = namesMap[arr[i]['Dest']];
 		flw = parseFloat(arr[i]['Flow']);
 		cap = parseFloat(arr[i]['Capacity']);
-		// console.log(src);
-		// console.log(dst);
-		// console.log(flw);
-		// console.log(cap);
+		console.log(src);
+		console.log(dst);
+		console.log(flw);
+		console.log(cap);
 		edges[src][dst].addFlow(flw);
 		edges[src][dst].setCapacity(cap);
 	}
@@ -32,13 +32,11 @@ var network = function(arr) {
 
 // Instantiate the nodes and edges
 network.prototype.createNetwork = function() {
-	console.log("createNetwork was called...");
 	for (var i = 0; i < this.n; i++) {
 		this.nodes.push(new node(namesArr[i]));
 		this.edges[i]= new Array(this.n);
 		for (var j = 0; j < this.n; j++) {
 			this.edges[i][j] = new edge(i, j);
-			console.log(this.edges[i][j]);
 		}
 	}
 }
