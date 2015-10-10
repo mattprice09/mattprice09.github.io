@@ -17,17 +17,19 @@ var loadLegend = function() {
 		document.getElementById("legend").appendChild(pairDiv);
 		document.getElementById(name).innerHTML = name;
 		document.getElementById(name).className = "legendPairClass";
-		document.getElementById(name).onClick = "processSDClick()";
+		document.getElementById(name).onClick = "processSDClick(name)";
 
 		activePairs.push(false);
 	}
 }
 
 // The function to be called when a legend element is clicked
-function processSDClick(sdPair) {
-	if (activePairs[num] == false) {
-		// If the SD pair data is not currently active on the map
-	} else {
-		// If the SD pair data is active on the map
-	}
+function processSDClick(name) {
+	$(document.getElementById(name)).effect("highlight", { color: "#ff0000" }, 3000);
+
+	// if (activePairs[num] == false) {
+	// 	// If the SD pair data is not currently active on the map
+	// } else {
+	// 	// If the SD pair data is active on the map
+	// }
 }
